@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <android.support.design.widget.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Systembolagets Id" android:inputType="number" android:id="@+id/wineId"
+          android:selectAllOnFocus="true" android:imeOptions="actionDone"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:text="Wine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/wineName"/>
+    <TextView
+        android:text="Winery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/winery"/>
+    <TextView
+        android:text="Grapes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:id="@+id/grapes"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" app:srcCompat="@android:drawable/stat_sys_download"
+          android:id="@+id/addWineButton" android:layout_weight="1" android:onClick="onInsertWine"/>
+      <ImageButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" app:srcCompat="@android:drawable/stat_sys_upload_done"
+          android:id="@+id/removeWineButton" android:layout_weight="1" android:onClick="onTakeOutWine"/>
+    </LinearLayout>
+  </LinearLayout>
+</android.support.constraint.ConstraintLayout>
